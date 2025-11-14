@@ -1,0 +1,60 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #facbf9, #f87cf6);
+}
+
+/* Container principal */
+.reserva-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+.reserva-container h2 {
+    color: #f87cf6;
+    margin-bottom: 15px;
+}
+
+.mensagem {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    background: #f87cf6;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: #facbf9;
+    transform: scale(1.03);
+}
