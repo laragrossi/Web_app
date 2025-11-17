@@ -38,9 +38,9 @@ $stmt->bind_param("sssssis", $nome, $descricao, $local, $data, $hora, $capacidad
 
     if ($stmt->execute()) {
         move_uploaded_file($_FILES['imagem']['tmp_name'], $target);
-        $mensagem = "✅ Evento cadastrado com sucesso!";
+        $mensagem = "Evento cadastrado com sucesso!";
     } else {
-        $erro = "❌ Erro ao cadastrar evento: " . $conn->error;
+        $erro = "Erro ao cadastrar evento: " . $conn->error;
     }
 }
 ?>
@@ -51,12 +51,12 @@ $stmt->bind_param("sssssis", $nome, $descricao, $local, $data, $hora, $capacidad
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Evento</title>
-    <link rel="stylesheet" href="css/criar_evento.css">
+    <link rel="stylesheet" href="../css/criar_evento.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🎭 Criar Evento Cultural</h1>
+            <h1>Criar Evento Cultural</h1>
             <a href="eventos.php" class="voltar">← Voltar</a>
         </header>
 

@@ -8,7 +8,7 @@
 
 /* Fundo */
 body {
-    background: linear-gradient(135deg, #55f3e1, #62d6dc);
+    background: linear-gradient(135deg, #facbf9, #f87cf6);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -35,19 +35,19 @@ header {
 }
 
 header h1 {
-    color: #118787;
+    color: #f87cf6;
     font-size: 24px;
 }
 
 .voltar {
     text-decoration: none;
-    color: #118787;
+    color: #f87cf6;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .voltar:hover {
-    color: #007adf;
+    color: #facbf9;
 }
 
 /* Formulário */
@@ -75,8 +75,8 @@ header h1 {
 
 .form-evento input:focus,
 .form-evento textarea:focus {
-    border-color: #118787;
-    box-shadow: 0 0 5px rgba(17, 135, 135, 0.3);
+    border-color: #f87cf6;
+    box-shadow: 0 0 5px #facbf9;
     outline: none;
 }
 
@@ -88,7 +88,7 @@ textarea {
 /* Botão de criar */
 .btn-criar {
     margin-top: 15px;
-    background: #118787;
+    background: #f87cf6;
     color: #fff;
     border: none;
     padding: 12px;
@@ -100,14 +100,14 @@ textarea {
 }
 
 .btn-criar:hover {
-    background: #0f6d6d;
+    background: #facbf9;
     transform: scale(1.03);
 }
 
 /* Mensagens */
 .sucesso {
-    background: #c7f7e8;
-    color: #0a645b;
+    background: #facbf9;
+    color: #f87cf6;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
