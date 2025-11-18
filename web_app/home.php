@@ -37,7 +37,7 @@ $tipoUsuario = $_SESSION['tipo']; // 'A' para admin, 'U' para comum
         <a href="criar_evento.php" class="btn admin">Criar Evento</a>
         <a href="consultareventos.php" class="btn admin">Consultar Eventos</a>
         <a href="consultar_reservas.php" class="btn admin">Ver Reservas</a>
-        <a href="perfil.php" class="btn admin">Editar perfil</a>
+        <a href="editar_perfil.php" class="btn admin">Editar perfil</a>
     </div>
 <?php endif; ?>
 

@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
 $login = $_SESSION['login'];
 
 // Busca os dados do usuário
-$sql = "SELECT login, senha, nome FROM usuario WHERE login = ?";
+$sql = "SELECT login, nome FROM usuario WHERE login = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $login);
 $stmt->execute();
@@ -23,10 +23,9 @@ if (isset($_POST['salvar'])) {
     $nome = trim($_POST['nome']);
     $senha = trim($_POST['senha']);
 
-
-    $sqlUpdate = "UPDATE usuarios SET nome = ?, email = ?, senha = ? WHERE login = ?";
+    $sqlUpdate = "UPDATE usuario SET nome = ?, senha = ? WHERE login = ?";
     $stmt = $conn->prepare($sqlUpdate);
-    $stmt->bind_param("ssss", $nome, $email, $senha, $login);
+    $stmt->bind_param("sss", $nome, $senha, $login);
     $stmt->execute();
 
     $mensagem = "Dados atualizados com sucesso!";
@@ -39,7 +38,21 @@ if (isset($_POST['salvar'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Perfil</title>
-    <link rel="stylesheet" href="../css/editar_perfil.css">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <style>
+        .senha-container {
+            position: relative;
+        }
+        .toggle-senha {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -57,10 +70,14 @@ if (isset($_POST['salvar'])) {
             <input type="text" name="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required>
 
             <label>Senha:</label>
-            <input type="password" name="senha" value="<?php echo htmlspecialchars($usuario['senha']); ?>" required>
+            <div class="senha-container">
+                <input type="password" id="senha" name="senha" placeholder="Digite a nova senha" required>
+            </div>
 
             <button type="submit" name="salvar" class="btn-salvar">Salvar Alterações</button>
         </form>
     </div>
+
 </body>
 </html>
+
